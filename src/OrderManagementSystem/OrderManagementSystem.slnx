@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="OrderManagementSystem.Core/OrderManagementSystem.Core.csproj" Id="bd761dfc-ccee-40c6-8aa2-2ff8459ce1e5" />
+  <Project Path="OrderManagementSystem.Infrastructure/OrderManagementSystem.Infrastructure.csproj" Id="e4693cd0-e5cf-4450-9f93-c15f0cc60230" />
+  <Project Path="OrderManagementSystem.Web.Api/OrderManagementSystem.Web.Api.csproj" Id="cadb74d5-bdc5-4ed0-9d74-86f0c3febe1a" />
+  <Project Path="OrderManagementSystem.Web.Mvc/OrderManagementSystem.Web.Mvc.csproj" Id="9162138e-f8d7-4d5b-87cc-18b19e194346" />
+</Solution>

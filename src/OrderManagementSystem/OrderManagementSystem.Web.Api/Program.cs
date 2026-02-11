@@ -1,7 +1,10 @@
 //usingleri ekledik.
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using OrderManagementSystem.Core.Interface;
 using OrderManagementSystem.Infrastructure.Data;
+using OrderManagementSystem.Infrastructure.Repositories;
+using OrderManagementSystem.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +17,10 @@ builder.Services.AddSwaggerGen();
 
 //DbContext baðlantýsý ekledik.
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+//DL kayýtlarý ekledik.
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IProductService, ProductService>();
 
 var app = builder.Build();
 

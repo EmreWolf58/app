@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using OrderManagementSystem.Infrastructure.Data;
 using OrderManagementSystem.Core.Entities;
+using OrderManagementSystem.Core.Interface;
+using OrderManagementSystem.Core.Dtos;
 
 namespace OrderManagementSystem.Web.Api.Controllers
 {
@@ -8,33 +10,37 @@ namespace OrderManagementSystem.Web.Api.Controllers
     [Route("api/[controller]")]
     public class ProductsController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly IProductService _service;
 
-        public ProductsController(AppDbContext context)
+        public ProductsController(IProductService service)
         {
-            _context = context;
-        }
-
-        [HttpPost]
-        public IActionResult Create(Product product)
-        {
-            _context.Products.Add(product);
-            _context.SaveChanges();
-            return CreatedAtAction(nameof(GetById), new {id=product.Id}, product);
-        }
-
-        [HttpGet("{id:int}")]
-        public IActionResult GetById (int id)
-        {
-            var product = _context.Products.Find(id);
-            if (product == null) return NotFound();
-            return Ok(product);
+            _service = service;
         }
 
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            return Ok(_context.Products.ToList());
+            return Ok(await _service.GetAllAsync());
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create (CreateProductRequest request)
+        {
+            var product = new Product
+            {
+                Name = request.Name,
+                Price = request.Price,
+                Stock = request.Stock
+            };
+            var created = await _service.CreateAsync(product);
+            return CreatedAtAction(nameof(GetById), new {id =created.Id}, created);
+        }
+        [HttpGet("{id:int}")]
+        public async Task<IActionResult> GetById (int id)
+        {
+            var product = await _service.GetByIdAsync(id);
+            if (product == null) return NotFound();
+            return Ok(product);
         }
     }
 }

@@ -3,9 +3,11 @@ using OrderManagementSystem.Infrastructure.Data;
 using OrderManagementSystem.Core.Entities;
 using OrderManagementSystem.Core.Interface;
 using OrderManagementSystem.Core.Dtos;
+using Microsoft.AspNetCore.Authorization;
 
 namespace OrderManagementSystem.Web.Api.Controllers
 {
+    [Authorize] //token yoksa 401 döner
     [ApiController]
     [Route("api/[controller]")]
     public class ProductsController : ControllerBase
@@ -41,6 +43,14 @@ namespace OrderManagementSystem.Web.Api.Controllers
             var product = await _service.GetByIdAsync(id);
             if (product == null) return NotFound();
             return Ok(product);
+        }
+
+        [Authorize(Roles ="Admin")]
+        [HttpDelete("{id:int}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            //demo
+            return Ok(new { message = $"Admin deleted product {id}" });
         }
     }
 }

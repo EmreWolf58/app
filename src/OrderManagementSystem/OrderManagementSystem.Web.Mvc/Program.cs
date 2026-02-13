@@ -1,7 +1,18 @@
+using OrderManagementSystem.Web.Mvc.Handlers;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+//HttpClient + Handler kaydý
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddTransient<BearerTokenHandler>();
+
+builder.Services.AddHttpClient("ApiClient", client =>
+{
+    client.BaseAddress = new Uri("https://localhost:7139/");
+}).AddHttpMessageHandler<BearerTokenHandler>();
 
 var app = builder.Build();
 

@@ -1,0 +1,30 @@
+﻿@model OrderManagementSystem.Core.Dtos.OrderDetailDto
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Order Detail";
+}
+
+<h3>Order Detail</h3>
+
+<div class="card mt-3">
+    <div class="card-body">
+        <dl class="row mb-0">
+            <dt class="col-sm-3">Order No</dt>
+            <dd class="col-sm-9">@Model.OrderNo</dd>
+
+            <dt class="col-sm-3">Customer</dt>
+            <dd class="col-sm-9">@Model.CustomerName</dd>
+
+            <dt class="col-sm-3">Total</dt>
+            <dd class="col-sm-9">@Model.TotalAmount</dd>
+
+            <dt class="col-sm-3">Status</dt>
+            <dd class="col-sm-9">@Model.Status</dd>
+
+            <dt class="col-sm-3">Created</dt>
+            <dd class="col-sm-9">@Model.CreatedAtUtc</dd>
+        </dl>
+    </div>
+</div>
+
+<a class="btn btn-secondary mt-3" asp-action="Index">Back</a>

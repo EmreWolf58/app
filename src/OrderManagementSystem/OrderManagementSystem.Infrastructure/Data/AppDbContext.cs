@@ -16,5 +16,7 @@ namespace OrderManagementSystem.Infrastructure.Data
         }
         public DbSet<Product> Products => Set<Product>();
         public DbSet<AppUser> Users => Set<AppUser>();
+
+        public DbSet<Order> Orders => Set<Order>();
     }
 }

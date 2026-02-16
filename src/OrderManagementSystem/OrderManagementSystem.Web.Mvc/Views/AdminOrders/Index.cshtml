@@ -1,0 +1,37 @@
+﻿@model List<OrderManagementSystem.Core.Dtos.OrderListItemDto>
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Orders";
+}
+
+<h3>Orders</h3>
+
+<table class="table table-striped mt-3">
+    <thead>
+        <tr>
+            <th>Order ID</th>
+            <th>Order No</th>
+            <th>Customer</th>
+            <th>Total</th>
+            <th>Status</th>
+            <th>Created</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var o in Model)
+        {
+            <tr>
+                <td>@o.Id</td>
+                <td>@o.OrderNo</td>
+                <td>@o.CustomerName</td>
+                <td>@o.TotalAmount</td>
+                <td>@o.Status</td>
+                <td>@o.CreatedAtUtc</td>
+                <td>
+                    <a class="btn btn-sm btn-outline-primary" asp-action="Detail" asp-route-id="@o.Id">Detail</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

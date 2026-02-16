@@ -49,5 +49,8 @@ namespace OrderManagementSystem.Web.Mvc.Controllers
             Response.Cookies.Delete("access_token");
             return RedirectToAction("Login");
         }
+
+        [HttpGet]
+        public IActionResult AccessDenied() => View();
     }
 }

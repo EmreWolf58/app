@@ -1,0 +1,19 @@
+﻿@model OrderManagementSystem.Core.Dtos.ProductDto
+
+<div class="mb-3">
+    <label class="form-label"></label>
+    <input class="form-control" asp-for="Name"/>
+    <span class="text-danger" asp-validation-for="Name"></span>
+</div>
+
+<div class="mb-3">
+    <label class="form-label"></label>
+    <input class="form-control" asp-for="Price"/>
+    <span class="text-danger" asp-validation-for="Price"></span>
+</div>
+
+<div class="mb-3">
+    <label class="form-label"></label>
+    <input class="form-control" asp-for="Stock" />
+    <span class="text-danger" asp-validation-for="Stock"></span>
+</div>

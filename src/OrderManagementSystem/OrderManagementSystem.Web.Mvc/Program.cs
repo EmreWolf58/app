@@ -1,4 +1,7 @@
 using OrderManagementSystem.Web.Mvc.Handlers;
+using OrderManagementSystem.Web.Mvc.Services;
+using OrderManagementSystem.Web.Mvc.Auth;
+using Microsoft.AspNetCore.Authentication;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +16,12 @@ builder.Services.AddHttpClient("ApiClient", client =>
 {
     client.BaseAddress = new Uri("https://localhost:7139/");
 }).AddHttpMessageHandler<BearerTokenHandler>();
+
+//DI kaydý
+builder.Services.AddScoped<ApiClient>();
+
+builder.Services.AddAuthentication("JwtCookie").AddScheme<AuthenticationSchemeOptions, JwtCookieAuthenticationHandler>("JwtCookie", options => { });
+builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
@@ -29,10 +38,11 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Account}/{action=Login}/{id?}");
 
 app.Run();

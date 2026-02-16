@@ -52,5 +52,21 @@ namespace OrderManagementSystem.Web.Api.Controllers
             //demo
             return Ok(new { message = $"Admin deleted product {id}" });
         }
+
+        [Authorize]
+        [HttpPut("{id:int}")]
+        public async Task<IActionResult> Update (int id, UpdateProductRequest request, [FromServices] AppDbContext db)
+        {
+            var product = await db.Products.FindAsync(id);
+            if (product == null) NotFound();
+
+            product.Name = request.Name;
+            product.Price = request.Price;
+            product.Stock = request.Stock;
+
+            await db.SaveChangesAsync();
+
+            return NoContent();
+        }
     }
 }

@@ -9,8 +9,14 @@ using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Serilog;
+using OrderManagementSystem.Web.Api.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
+
+//serilog baðlantýsý
+Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(builder.Configuration).Enrich.FromLogContext().CreateLogger();
+builder.Host.UseSerilog();
 
 // Add services to the container.
 
@@ -74,6 +80,15 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 builder.Services.AddAuthorization();
 
 var app = builder.Build();
+
+//Middleware ekledik.
+app.UseMiddleware<GlobalExceptionMiddleware>();
+
+//Health Endpoint
+app.MapGet("/health", () => Results.Ok(new { status="ok"}));
+
+//request login
+app.UseSerilogRequestLogging();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

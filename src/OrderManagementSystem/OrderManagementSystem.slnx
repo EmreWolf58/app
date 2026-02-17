@@ -1,4 +1,6 @@
 <Solution>
+  <Project Path="../../tests/OrderManagementSystem.Tests.Integration/OrderManagementSystem.Tests.Integration.csproj" Id="1efad53f-7549-4514-83c7-53cb74c15a33" />
+  <Project Path="../../tests/OrderManagementSystem.Tests.Unit/OrderManagementSystem.Tests.Unit.csproj" Id="dcd4a4a1-1950-4324-8532-ea901485c305" />
   <Project Path="OrderManagementSystem.Core/OrderManagementSystem.Core.csproj" Id="bd761dfc-ccee-40c6-8aa2-2ff8459ce1e5" />
   <Project Path="OrderManagementSystem.Infrastructure/OrderManagementSystem.Infrastructure.csproj" Id="e4693cd0-e5cf-4450-9f93-c15f0cc60230" />
   <Project Path="OrderManagementSystem.Web.Api/OrderManagementSystem.Web.Api.csproj" Id="cadb74d5-bdc5-4ed0-9d74-86f0c3febe1a" />

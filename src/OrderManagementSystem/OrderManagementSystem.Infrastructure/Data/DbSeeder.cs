@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
+using OrderManagementSystem.Core.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Identity;
-using OrderManagementSystem.Core.Entities;
 
 namespace OrderManagementSystem.Infrastructure.Data
 {
@@ -13,7 +14,28 @@ namespace OrderManagementSystem.Infrastructure.Data
     {
         public static async Task SeedAsync(AppDbContext db)
         {
-            await db.Database.MigrateAsync();
+            const int maxAttempts = 15;
+
+            for (int attempt = 1; attempt <= maxAttempts; attempt++)
+            {
+                try
+                {
+                    await db.Database.MigrateAsync();
+                    break; // başarılıysa döngüden çık
+                }
+                catch (Exception ex) when (
+                    ex is SqlException ||
+                    ex.InnerException is SqlException ||
+                    ex.Message.Contains("A network-related", StringComparison.OrdinalIgnoreCase) ||
+                    ex.Message.Contains("Cannot open database", StringComparison.OrdinalIgnoreCase) ||
+                    ex.Message.Contains("Login failed", StringComparison.OrdinalIgnoreCase))
+                {
+                    if (attempt == maxAttempts)
+                        throw;
+
+                    await Task.Delay(TimeSpan.FromSeconds(2 * attempt));
+                }
+            }
 
             //User Seed
             if (!await db.Users.AnyAsync())

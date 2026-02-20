@@ -11,6 +11,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;
 using OrderManagementSystem.Web.Api.Middleware;
+using OrderManagementSystem.Web.Api.Hangfire;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -79,6 +80,9 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 });
 builder.Services.AddAuthorization();
 
+//hangfire
+builder.Services.AddHangfireSetup(builder.Configuration);
+
 var app = builder.Build();
 
 //Middleware ekledik.
@@ -102,6 +106,9 @@ app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+//hangfire
+app.UseHangfireSetup(app.Environment);
 
 app.MapControllers();
 

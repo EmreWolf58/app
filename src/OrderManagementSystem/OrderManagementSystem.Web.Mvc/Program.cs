@@ -12,7 +12,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddTransient<BearerTokenHandler>();
 
-var apiBaseUrl = builder.Configuration["Api:BaseUrl"] ?? "http://localhost:5001/";
+var apiBaseUrl = builder.Configuration["Api:BaseUrl"] ?? "http://localhost:7139/";
 
 builder.Services.AddHttpClient("ApiClient", client =>
 {

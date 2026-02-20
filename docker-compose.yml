@@ -1,0 +1,43 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: oms-sql
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=Your_strong_Password123!
+    ports:
+      - "1433:1433"
+    volumes:
+      - oms_sqldata:/var/opt/mssql
+    restart: unless-stopped
+
+  api:
+    build:
+      context: .
+      dockerfile: src/OrderManagementSystem/OrderManagementSystem.Web.Api/Dockerfile
+    container_name: oms-api
+    depends_on:
+      - sqlserver
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=OrderManagementDb;User Id=sa;Password=Your_strong_Password123!;TrustServerCertificate=True;
+    ports:
+      - "6001:8080"
+    restart: unless-stopped
+
+  mvc:
+    build:
+      context: .
+      dockerfile: src/OrderManagementSystem/OrderManagementSystem.Web.Mvc/Dockerfile
+    container_name: oms-mvc
+    depends_on:
+      - api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - Api__BaseUrl=http://api:8080/
+    ports:
+      - "6100:8080"
+    restart: unless-stopped
+
+volumes:
+  oms_sqldata:

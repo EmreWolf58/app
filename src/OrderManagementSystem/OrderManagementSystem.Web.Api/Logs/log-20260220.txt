@@ -1,0 +1,238 @@
+[2026-02-20 14:51:01 INF]  Start installing Hangfire SQL objects...
+[2026-02-20 14:51:02 INF]  Hangfire SQL objects installed.
+[2026-02-20 14:51:03 WRN]  No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-02-20 14:51:03 WRN]  No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-02-20 14:51:03 INF]  Now listening on: https://localhost:7139
+[2026-02-20 14:51:03 INF]  Now listening on: http://localhost:5281
+[2026-02-20 14:51:03 INF]  Starting Hangfire Server using job storage: 'SQL Server: localhost@OrderManagementDb'
+[2026-02-20 14:51:03 INF]  Using the following options for SQL Server job storage: Queue poll interval: 00:00:10.
+[2026-02-20 14:51:03 INF]  Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+[2026-02-20 14:51:03 INF]  Application started. Press Ctrl+C to shut down.
+[2026-02-20 14:51:03 INF]  Hosting environment: Development
+[2026-02-20 14:51:03 INF]  Content root path: C:\GitCode\app\src\OrderManagementSystem\OrderManagementSystem.Web.Api
+[2026-02-20 14:51:03 INF]  Server emre-pc:19788:3a27d614 successfully announced in 9,1648 ms
+[2026-02-20 14:51:03 INF]  Server emre-pc:19788:3a27d614 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2026-02-20 14:51:03 INF]  Server emre-pc:19788:3a27d614 all the dispatchers started
+[2026-02-20 14:51:04 INF] 51fbc36a395e10d89e1c31072d2b95cd HTTP GET /swagger/index.html responded 200 in 70.6125 ms
+[2026-02-20 14:51:05 INF] ff44fa01055b21d100fdf9c539126593 HTTP GET /swagger/v1/swagger.json responded 200 in 10.2475 ms
+[2026-02-20 14:51:05 INF] 358d8f3c197783c27cd7fc59e3e1b9c9 HTTP GET /swagger/favicon-32x32.png responded 200 in 4.8520 ms
+[2026-02-20 14:51:15 INF] acea78d7bb786dec0190a4c57b76489f HTTP GET /hangfire responded 401 in 21.3891 ms
+[2026-02-20 14:51:32 INF] 20c0c88e2117803da5c7444a7870d46d HTTP GET /swagger/v1/swagger.json responded 200 in 4.0583 ms
+[2026-02-20 14:51:57 INF] 085c4fa70ed4c5628dbd78e4db32a88f HTTP POST /api/Auth/login responded 200 in 252.1765 ms
+[2026-02-20 14:52:14 INF] 09a51a38092e5449e1c8f3d218b03e2f HTTP GET /hangfire responded 401 in 0.2384 ms
+[2026-02-20 14:52:15 INF] f7d3bf99848b912160cb04b6a1498781 HTTP GET /hangfire responded 401 in 0.3159 ms
+[2026-02-20 14:52:15 INF] 6ecea851fed5de4b511d47519293dba2 HTTP GET /hangfire responded 401 in 0.0674 ms
+[2026-02-20 14:52:16 INF] f27aa26420461fef2f591bc52a5711b3 HTTP GET /hangfire responded 401 in 0.2037 ms
+[2026-02-20 14:55:18 INF] ef061afc986c96499c5717497b9bb71f HTTP GET /hangfire responded 401 in 0.0872 ms
+[2026-02-20 14:56:03 INF] d00b90d0e125b00f287c48fb2d24eca2 HTTP GET /hangfire responded 401 in 0.0966 ms
+[2026-02-20 15:02:16 INF]  Start installing Hangfire SQL objects...
+[2026-02-20 15:02:16 INF]  Hangfire SQL objects installed.
+[2026-02-20 15:02:17 WRN]  No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-02-20 15:02:17 WRN]  No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+[2026-02-20 15:02:17 INF]  Now listening on: https://localhost:7139
+[2026-02-20 15:02:17 INF]  Now listening on: http://localhost:5281
+[2026-02-20 15:02:17 INF]  Starting Hangfire Server using job storage: 'SQL Server: localhost@OrderManagementDb'
+[2026-02-20 15:02:17 INF]  Using the following options for SQL Server job storage: Queue poll interval: 00:00:10.
+[2026-02-20 15:02:17 INF]  Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+[2026-02-20 15:02:17 INF]  Application started. Press Ctrl+C to shut down.
+[2026-02-20 15:02:17 INF]  Hosting environment: Development
+[2026-02-20 15:02:17 INF]  Content root path: C:\GitCode\app\src\OrderManagementSystem\OrderManagementSystem.Web.Api
+[2026-02-20 15:02:17 INF]  Server emre-pc:16492:c00668ee successfully announced in 14,6687 ms
+[2026-02-20 15:02:17 INF]  Server emre-pc:16492:c00668ee is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2026-02-20 15:02:17 INF]  Server emre-pc:16492:c00668ee all the dispatchers started
+[2026-02-20 15:02:18 INF] 5e56b6a70d9dbbf9cea9fdfb8d5ca0fd HTTP GET /swagger/index.html responded 200 in 54.9170 ms
+[2026-02-20 15:02:18 INF] a23de8e18681045fb65ea85ec1f9f5e2 HTTP GET /swagger/v1/swagger.json responded 200 in 8.3227 ms
+[2026-02-20 15:02:27 INF] febf54ab424a379294396a4516487539 HTTP GET /hangfire responded 200 in 91.2493 ms
+[2026-02-20 15:02:27 INF] c89a845449c00efcd4107db547191691 HTTP GET /hangfire/css18230644021835 responded 200 in 8.8864 ms
+[2026-02-20 15:02:27 INF] 289c11787a66bc9f95a052c746329812 HTTP GET /hangfire/css-dark18230228482856 responded 200 in 8.4819 ms
+[2026-02-20 15:02:27 INF] fe37b4cce48ec913661884c81fec1934 HTTP GET /hangfire/fonts/glyphicons-halflings-regular/woff2 responded 200 in 4.0366 ms
+[2026-02-20 15:02:27 INF] 417e028ea512aeee00d5ff7956295141 HTTP GET /hangfire/js182301800899982 responded 200 in 24.6791 ms
+[2026-02-20 15:02:29 INF] 7f29c945f54609058110c5da1452070e HTTP POST /hangfire/stats responded 200 in 24.9047 ms
+[2026-02-20 15:02:32 INF] 69715ef9d9fe1aef587834d2429cae1a HTTP POST /hangfire/stats responded 200 in 3.6706 ms
+[2026-02-20 15:02:34 INF] 7a74796fadcc052fe92791cf75c3749e HTTP POST /hangfire/stats responded 200 in 3.6561 ms
+[2026-02-20 15:02:36 INF] 2bf592d340c2073cb6f26e63f310393e HTTP POST /hangfire/stats responded 200 in 692.6177 ms
+[2026-02-20 15:02:36 INF] 05ae295904701689206d443c1b680659 HTTP GET /hangfire/recurring responded 200 in 134.1067 ms
+[2026-02-20 15:02:38 INF] 3bd240c315cab43d0d70fac124203c90 HTTP POST /hangfire/stats responded 200 in 18.8288 ms
+[2026-02-20 15:02:40 INF] aaa4c3eda837c3e75c4d4720b854e82b HTTP POST /hangfire/stats responded 200 in 11.8665 ms
+[2026-02-20 15:02:42 INF] f46604559d87e67805006ac43ffe7833 HTTP POST /hangfire/stats responded 200 in 1.0628 ms
+[2026-02-20 15:02:44 INF] 8d7023a60f47741dab02ae5071a6d920 HTTP POST /hangfire/stats responded 200 in 1.5330 ms
+[2026-02-20 15:02:46 INF] 11610871cc5d16e2f7125ac2fe430a02 HTTP POST /hangfire/stats responded 200 in 1.1442 ms
+[2026-02-20 15:02:47 INF] 5541e9dad9776f847e59e8d0e24284a9 HTTP GET /hangfire/recurring responded 200 in 20.8947 ms
+[2026-02-20 15:02:49 INF] 75949a3fc2eeb8a457e145e27ae7e8e4 HTTP POST /hangfire/stats responded 200 in 1.0691 ms
+[2026-02-20 15:02:51 INF] 156c2ffc1284cee6e83013f5dec72d77 HTTP POST /hangfire/stats responded 200 in 1.1416 ms
+[2026-02-20 15:02:53 INF] 7b7ba8b85eb15a777fb34f76c0626a0d HTTP GET /hangfire/servers responded 200 in 13.8762 ms
+[2026-02-20 15:02:55 INF] 22da3b4a86fbae2a361874604836f474 HTTP POST /hangfire/stats responded 200 in 1.1159 ms
+[2026-02-20 15:02:57 INF] 04c1072cf5e5374dd94ad9c96cc5a7ea HTTP POST /hangfire/stats responded 200 in 1.0226 ms
+[2026-02-20 15:02:59 INF] 685a075a973b3b83ae5212f1f7392b04 HTTP POST /hangfire/stats responded 200 in 0.9840 ms
+[2026-02-20 15:03:00 INF] f07c72b88591406d7f59c1317eaa98fa HTTP GET /hangfire/jobs/enqueued responded 200 in 8.3271 ms
+[2026-02-20 15:03:02 INF] e238e2b5c46f744004e504973eea4f25 HTTP POST /hangfire/stats responded 200 in 1.2614 ms
+[2026-02-20 15:03:04 INF] 03c5256a0037ce1cadf50463d73c343e HTTP GET /hangfire/retries responded 200 in 5.4039 ms
+[2026-02-20 15:03:06 INF] b2bfb0cf0d25649371ecdd5426827874 HTTP POST /hangfire/stats responded 200 in 1.2910 ms
+[2026-02-20 15:03:08 INF] 1d39189045fe3aa33066cdad9583cd13 HTTP POST /hangfire/stats responded 200 in 1.1896 ms
+[2026-02-20 15:03:10 INF] c7f1e254ceefa1676f87651b57118031 HTTP POST /hangfire/stats responded 200 in 1.0210 ms
+[2026-02-20 15:03:12 INF] addef1b458af15b85744d04f31137648 HTTP POST /hangfire/stats responded 200 in 0.9812 ms
+[2026-02-20 15:03:14 INF] da9fff0cea7d9c468921f749bf010f7c HTTP POST /hangfire/stats responded 200 in 1.2442 ms
+[2026-02-20 15:03:16 INF] 644b167907f22bf0df4dab109035a9df HTTP POST /hangfire/stats responded 200 in 1.0089 ms
+[2026-02-20 15:03:18 INF] abd0056d05444dbc61491071b7a5c58d HTTP POST /hangfire/stats responded 200 in 1.0908 ms
+[2026-02-20 15:03:20 INF] 88bf23a8f007b63f000b5bbfdd6a444f HTTP POST /hangfire/stats responded 200 in 1.5196 ms
+[2026-02-20 15:03:22 INF] 647c9b8d4f9c105c6d9815ff1c8fb25d HTTP POST /hangfire/stats responded 200 in 1.9179 ms
+[2026-02-20 15:03:24 INF] 5f6a54e898ca07202d81a0d5649666ac HTTP POST /hangfire/stats responded 200 in 1.2051 ms
+[2026-02-20 15:03:27 INF] 018516a9736d7e1c04010be311515154 HTTP POST /hangfire/stats responded 200 in 1.2177 ms
+[2026-02-20 15:03:30 INF] 81db97f22991dde76fca865ed997c3d0 HTTP POST /hangfire/stats responded 200 in 1.2957 ms
+[2026-02-20 15:03:33 INF] df86dea9f53630755fe262ee1f9a348e HTTP POST /hangfire/stats responded 200 in 0.8997 ms
+[2026-02-20 15:03:36 INF] 70f26b355441b3ceb53d6853ad654e11 HTTP POST /hangfire/stats responded 200 in 1.1849 ms
+[2026-02-20 15:03:39 INF] d6de5ae572a4e695a30a3e6b2c7ce4fc HTTP POST /hangfire/stats responded 200 in 1.2460 ms
+[2026-02-20 15:03:42 INF] 5733129585d9558e293a9b64fb8156c9 HTTP POST /hangfire/stats responded 200 in 8.1627 ms
+[2026-02-20 15:03:45 INF] b7c22c2a5f8818de7d240ca95c80838d HTTP POST /hangfire/stats responded 200 in 7.6033 ms
+[2026-02-20 15:03:48 INF] 480d1c1ee8d8a47c947a3788a5e1ff44 HTTP POST /hangfire/stats responded 200 in 6.6696 ms
+[2026-02-20 15:03:51 INF] d3d49aa66885b4d9aa044ec91a76dca6 HTTP POST /hangfire/stats responded 200 in 1.0465 ms
+[2026-02-20 15:03:54 INF] bb485fea5ff45a1f7d30de4101cfdf0c HTTP POST /hangfire/stats responded 200 in 1.1375 ms
+[2026-02-20 15:03:57 INF] 452ba31adc588ec18ebf792dc855162d HTTP POST /hangfire/stats responded 200 in 1.0905 ms
+[2026-02-20 15:04:00 INF] e3ff68a31283c4285c502b026a926dd0 HTTP POST /hangfire/stats responded 200 in 1.0067 ms
+[2026-02-20 15:04:03 INF] 8047e7f47a20cf0b94c10bcbbd1c649f HTTP POST /hangfire/stats responded 200 in 1.0625 ms
+[2026-02-20 15:04:06 INF] 41b9c3dae48a8f625d9096ef72abf50b HTTP POST /hangfire/stats responded 200 in 1.0288 ms
+[2026-02-20 15:04:09 INF] 9208ce2ef3be060c91efb7f5c507aeec HTTP POST /hangfire/stats responded 200 in 1.1982 ms
+[2026-02-20 15:04:12 INF] aa4c53e03a6f671eddd6b9fce66ba412 HTTP POST /hangfire/stats responded 200 in 1.0934 ms
+[2026-02-20 15:04:15 INF] 1b03fe6623f31978227712e3d795fc59 HTTP POST /hangfire/stats responded 200 in 1.1477 ms
+[2026-02-20 15:04:18 INF] 3a94f796afc5dd3f1f75f9bcf45cdc28 HTTP POST /hangfire/stats responded 200 in 1.1521 ms
+[2026-02-20 15:04:21 INF] a5d574db87f3da0f12301f2ffae4577e HTTP POST /hangfire/stats responded 200 in 1.0195 ms
+[2026-02-20 15:04:24 INF] b4804d0373750dd7031f9a0233d335d9 HTTP POST /hangfire/stats responded 200 in 1.0256 ms
+[2026-02-20 15:04:27 INF] a6fd2a8e60eab14003caf1691b0da0c6 HTTP POST /hangfire/stats responded 200 in 1.3600 ms
+[2026-02-20 15:04:30 INF] e26895df3bffbcf858ad82d52da15099 HTTP POST /hangfire/stats responded 200 in 1.2340 ms
+[2026-02-20 15:04:33 INF] 367c2dcbf9de9203cb4e5010a450d9de HTTP POST /hangfire/stats responded 200 in 1.1806 ms
+[2026-02-20 15:04:35 INF] bf249afcd8ff54dedc993ad7cb8954ef HTTP POST /hangfire/stats responded 200 in 1.0581 ms
+[2026-02-20 15:04:38 INF] 55e4a19ead7e625762c816c71d0be7a1 HTTP POST /hangfire/stats responded 200 in 1.2402 ms
+[2026-02-20 15:04:40 INF] 26835a47ef59cd4ec1376d13f395bce0 HTTP POST /hangfire/stats responded 200 in 1.5126 ms
+[2026-02-20 15:04:41 INF] 5069c859066ba8895083d9ac1d05bfec HTTP GET /hangfire/recurring responded 200 in 14.0234 ms
+[2026-02-20 15:04:43 INF] 3dde2ac4da02d4e291dbf53cd743c370 HTTP POST /hangfire/recurring/trigger responded 204 in 66.9883 ms
+[2026-02-20 15:04:43 INF] b03333e9ff1f735cafb49fc28edd9cd1 HTTP GET /hangfire/recurring responded 200 in 45.8513 ms
+[2026-02-20 15:04:43 INF]  DailyReport "2026-02-20T00:00:00.0000000Z": Total orders in DB = 2
+[2026-02-20 15:04:45 INF] ae24fdfecaa8b63d71f1b41c627ea2ef HTTP POST /hangfire/stats responded 200 in 5.0773 ms
+[2026-02-20 15:04:46 INF] c802eb4efa1a393ee9f3323c05bd0094 HTTP GET /hangfire/jobs/enqueued responded 200 in 18.2886 ms
+[2026-02-20 15:04:48 INF] eddf6e1a8787db6ac5b000eec0c84e05 HTTP POST /hangfire/stats responded 200 in 7.5658 ms
+[2026-02-20 15:04:48 INF] 1d6a1606c4c82d9cdc27eef9e5f9f047 HTTP GET /hangfire/jobs/enqueued responded 200 in 15.9679 ms
+[2026-02-20 15:04:50 INF] 9f8d602c398197da16f618a07a19b37a HTTP POST /hangfire/stats responded 200 in 7.1697 ms
+[2026-02-20 15:04:51 INF] 644908a10a9ed5533c597295049f606d HTTP GET /hangfire/jobs/scheduled responded 200 in 17.6242 ms
+[2026-02-20 15:04:52 INF] 9e07bd6d24923a76997515d690c4c378 HTTP GET /hangfire/jobs/enqueued responded 200 in 3.4212 ms
+[2026-02-20 15:04:54 INF] bb0034da4dad43a1a42fe10cbf5ce7f7 HTTP POST /hangfire/stats responded 200 in 1.2085 ms
+[2026-02-20 15:04:55 INF] 344d9f29c608382ef74c1b9e46e3835d HTTP GET /hangfire/servers responded 200 in 4.5560 ms
+[2026-02-20 15:04:56 INF] 03b93898793c823e8141903917f43b18 HTTP GET /hangfire/recurring responded 200 in 10.0302 ms
+[2026-02-20 15:04:58 INF] b8c776e4f2e945a4320850a90ba17720 HTTP POST /hangfire/stats responded 200 in 1.2864 ms
+[2026-02-20 15:04:59 INF] 3597d7031e54257fff3d76245dd4b89f HTTP GET /hangfire/jobs/details/1 responded 200 in 19.3941 ms
+[2026-02-20 15:05:01 INF] e3232de4f5b7d57590eb4b2daf7146e1 HTTP POST /hangfire/stats responded 200 in 1.3745 ms
+[2026-02-20 15:05:03 INF] 5f506a3239c84c4878dad076c837a88f HTTP POST /hangfire/stats responded 200 in 1.3403 ms
+[2026-02-20 15:05:05 INF] 8e2e0f2581efa5419b8ccc3c8784c024 HTTP POST /hangfire/stats responded 200 in 1.2854 ms
+[2026-02-20 15:05:07 INF] 7975bd21d0400b39e83223616cd2c042 HTTP POST /hangfire/stats responded 200 in 1.4540 ms
+[2026-02-20 15:05:10 INF] ef5b7e58036096a883751833ab65c548 HTTP POST /hangfire/stats responded 200 in 1.3563 ms
+[2026-02-20 15:05:12 INF] 17462bfe0181a0e105e6e9a53d55daaa HTTP POST /hangfire/stats responded 200 in 1.2616 ms
+[2026-02-20 15:05:14 INF] 1b211d649a673d94cd8dc098288f7c06 HTTP POST /hangfire/stats responded 200 in 1.2267 ms
+[2026-02-20 15:05:16 INF] b9a28e8b7b137c1df2f9a3438ae90ebc HTTP POST /hangfire/stats responded 200 in 1.2024 ms
+[2026-02-20 15:05:18 INF] d05b86b6dac7efb3a6474a03f0ccc2b9 HTTP POST /hangfire/stats responded 200 in 0.9984 ms
+[2026-02-20 15:05:20 INF] 7fbaa8c14fae8905fe0500f925b9c301 HTTP POST /hangfire/stats responded 200 in 1.0132 ms
+[2026-02-20 15:05:22 INF] a221951846e40f18f848e9fad51a8275 HTTP POST /hangfire/stats responded 200 in 1.1942 ms
+[2026-02-20 15:05:22 INF] 500c5c22873525d76282134ccc92bebe HTTP GET /hangfire/jobs/succeeded responded 200 in 18.5951 ms
+[2026-02-20 15:05:24 INF] 52f2d02540581f2d0e421456051e0cdc HTTP POST /hangfire/stats responded 200 in 1.5253 ms
+[2026-02-20 15:05:26 INF] 185115f85f79d36cbb123abc4eaf5131 HTTP POST /hangfire/stats responded 200 in 1.2394 ms
+[2026-02-20 15:05:28 INF] ca6d0d505615e8375b62ec0d34f34d8d HTTP POST /hangfire/stats responded 200 in 1.3330 ms
+[2026-02-20 15:05:30 INF] 1e410e9fb4897c989537e3c00025cc58 HTTP GET /hangfire/jobs/details/1 responded 200 in 6.5856 ms
+[2026-02-20 15:05:32 INF] 234c98f824cf54449c6f451e14207188 HTTP POST /hangfire/stats responded 200 in 1.2340 ms
+[2026-02-20 15:05:34 INF] 160104294996e90a00d22609463a931a HTTP POST /hangfire/stats responded 200 in 1.3882 ms
+[2026-02-20 15:05:36 INF] dc792b188b1c67556bf056513e9f2bf1 HTTP POST /hangfire/stats responded 200 in 1.1646 ms
+[2026-02-20 15:05:38 INF] 5742ea9f51526042a7b556b7eecbdb8b HTTP POST /hangfire/stats responded 200 in 1.4471 ms
+[2026-02-20 15:05:40 INF] 07fede2ae30fa38770ac99e0fa9c1d26 HTTP POST /hangfire/stats responded 200 in 1.2104 ms
+[2026-02-20 15:05:42 INF] a854ac99728e8d37dd5a240678b8eb7b HTTP POST /hangfire/stats responded 200 in 1.2524 ms
+[2026-02-20 15:05:44 INF] f1ddcb43e5eb65606fbd3a701137dd78 HTTP POST /hangfire/stats responded 200 in 1.0716 ms
+[2026-02-20 15:05:46 INF] 65365061c3902599a3036b07da4c3fa3 HTTP POST /hangfire/stats responded 200 in 1.2116 ms
+[2026-02-20 15:05:48 INF] e04bbc22a35e1c38b8a84424ef73b8b3 HTTP POST /hangfire/stats responded 200 in 1.1676 ms
+[2026-02-20 15:05:50 INF] f8b4952f4161b0c12bb5d17aef7ca0cd HTTP POST /hangfire/stats responded 200 in 1.0268 ms
+[2026-02-20 15:05:52 INF] 5182ebf89aca4ed2a9b54d31f0ecf5c6 HTTP POST /hangfire/stats responded 200 in 1.1894 ms
+[2026-02-20 15:05:54 INF] ae28bdd4b0dc2379e8b0012f847827f8 HTTP POST /hangfire/stats responded 200 in 7.1447 ms
+[2026-02-20 15:05:56 INF] b57c38b56c02b50282e4379232805e91 HTTP POST /hangfire/stats responded 200 in 6.9162 ms
+[2026-02-20 15:05:58 INF] 95620b5e7113f558f3a9b547336bf93f HTTP POST /hangfire/stats responded 200 in 7.2328 ms
+[2026-02-20 15:06:00 INF] ed7ebc43d0dc8f1cb7199c6bed9816db HTTP POST /hangfire/stats responded 200 in 1.1534 ms
+[2026-02-20 15:06:02 INF] 36a81d8e3104656271bbb9845782f0e4 HTTP POST /hangfire/stats responded 200 in 1.1284 ms
+[2026-02-20 15:06:04 INF] 53b39c3b2532c01108e1b2c7c80f57ba HTTP POST /hangfire/stats responded 200 in 1.1373 ms
+[2026-02-20 15:06:06 INF] 0a867ca690acb1acf0f58ef3d7097717 HTTP POST /hangfire/stats responded 200 in 1.1464 ms
+[2026-02-20 15:06:08 INF] 19f995722c9d1bf47d12c7226dc28170 HTTP POST /hangfire/stats responded 200 in 1.2047 ms
+[2026-02-20 15:06:10 INF] 7fc002590d9f307bd241a6a171ede65f HTTP POST /hangfire/stats responded 200 in 1.1255 ms
+[2026-02-20 15:06:12 INF] ffed1678aec996444eb73655ea77d1c8 HTTP POST /hangfire/stats responded 200 in 1.0854 ms
+[2026-02-20 15:06:14 INF] e941996d5db893063941571741e0e45a HTTP POST /hangfire/stats responded 200 in 1.1756 ms
+[2026-02-20 15:06:16 INF] 8be5d26959ad1b42285c3e4fd73b5ad3 HTTP POST /hangfire/stats responded 200 in 1.2207 ms
+[2026-02-20 15:06:18 INF] 3560c84760e3be32ea752df750f5d1ba HTTP POST /hangfire/stats responded 200 in 1.1063 ms
+[2026-02-20 15:06:20 INF] c3ce7ad8207221b4f329160149fc9e41 HTTP POST /hangfire/stats responded 200 in 1.2912 ms
+[2026-02-20 15:06:22 INF] dd55fb6a20daf4fb119a6ec760e1140d HTTP POST /hangfire/stats responded 200 in 1.2752 ms
+[2026-02-20 15:06:24 INF] 0a3850db9413a12186f7630a7e1a307d HTTP POST /hangfire/stats responded 200 in 1.0710 ms
+[2026-02-20 15:06:26 INF] 3f303b7e109faecb40fa8bd2bca7c5cd HTTP POST /hangfire/stats responded 200 in 1.0622 ms
+[2026-02-20 15:06:28 INF] b498756826bcec50d172e662801ac8ad HTTP POST /hangfire/stats responded 200 in 1.1851 ms
+[2026-02-20 15:06:30 INF] ce85ce2cacf741ddd8c1231879bed926 HTTP POST /hangfire/stats responded 200 in 1.1466 ms
+[2026-02-20 15:06:32 INF] 25251cb561bc91f60b9ea4491e12e690 HTTP POST /hangfire/stats responded 200 in 1.1533 ms
+[2026-02-20 15:06:34 INF] 75c4fa99dbfc0d30874e877f8ab77e83 HTTP POST /hangfire/stats responded 200 in 1.1024 ms
+[2026-02-20 15:06:36 INF] 195915115cc3b0cacb311f21d3e9b6ab HTTP POST /hangfire/stats responded 200 in 0.9542 ms
+[2026-02-20 15:06:38 INF] 7b0669ba5ac302ff387036388df65ab8 HTTP POST /hangfire/stats responded 200 in 1.1482 ms
+[2026-02-20 15:06:40 INF] 0c8ba94c7e91cef0d2bec0ec95b7c19f HTTP POST /hangfire/stats responded 200 in 1.3164 ms
+[2026-02-20 15:06:42 INF] 3e28f5470b54cf061fe395636d9e6f5c HTTP POST /hangfire/stats responded 200 in 1.1319 ms
+[2026-02-20 15:06:44 INF] 47c997a6e5ad5ed7c6184b643593ed9b HTTP POST /hangfire/stats responded 200 in 0.9718 ms
+[2026-02-20 15:06:46 INF] aa8e7ceaab31c91a45ba83c145e016e9 HTTP POST /hangfire/stats responded 200 in 1.1253 ms
+[2026-02-20 15:06:48 INF] 38480b3602eee30000ec4bce98bbbafc HTTP POST /hangfire/stats responded 200 in 1.1247 ms
+[2026-02-20 15:06:50 INF] b5836c47aeb057f70e5be2dec3d78c59 HTTP POST /hangfire/stats responded 200 in 1.1274 ms
+[2026-02-20 15:06:52 INF] 4f283386cb175510f80729ddbd99bf54 HTTP POST /hangfire/stats responded 200 in 0.9695 ms
+[2026-02-20 15:06:54 INF] fd37511490685ac155434dc393f261d4 HTTP POST /hangfire/stats responded 200 in 1.2143 ms
+[2026-02-20 15:06:56 INF] fa721ad280fbe6c9a8724e33adab9d32 HTTP POST /hangfire/stats responded 200 in 1.0744 ms
+[2026-02-20 15:06:58 INF] 0f7a7066b6652f9b545054159ead2f70 HTTP POST /hangfire/stats responded 200 in 6.9291 ms
+[2026-02-20 15:07:00 INF] 2e05ea4677fc04a08de0e3e38a0fb3a6 HTTP POST /hangfire/stats responded 200 in 7.0260 ms
+[2026-02-20 15:07:02 INF] 9ce8f96d0c298be87667a77001f9aa9e HTTP POST /hangfire/stats responded 200 in 7.2968 ms
+[2026-02-20 15:07:04 INF] 16e75f444705f70de32651a2020cb845 HTTP POST /hangfire/stats responded 200 in 1.1800 ms
+[2026-02-20 15:07:06 INF] 0a0467a4fe0303fdc9df02c786818495 HTTP POST /hangfire/stats responded 200 in 1.0378 ms
+[2026-02-20 15:07:08 INF] c260cbdfb20a3ff98072d470d5fbeb2b HTTP POST /hangfire/stats responded 200 in 1.1525 ms
+[2026-02-20 15:07:10 INF] 7073871e40818a4336bb63a19cc15c71 HTTP POST /hangfire/stats responded 200 in 1.1250 ms
+[2026-02-20 15:07:12 INF] 77337811ee727a074c0f7a7f451cfac6 HTTP POST /hangfire/stats responded 200 in 1.1459 ms
+[2026-02-20 15:07:14 INF] da5662932325020df7775f9f951c7fed HTTP POST /hangfire/stats responded 200 in 1.1259 ms
+[2026-02-20 15:07:16 INF] 26799372b5d8da4b79daa41dac7cd232 HTTP POST /hangfire/stats responded 200 in 1.1890 ms
+[2026-02-20 15:07:17 INF]  1 servers were removed due to timeout
+[2026-02-20 15:07:18 INF] 367591d1a7681d3bf6ccff48e89cd360 HTTP POST /hangfire/stats responded 200 in 1.1429 ms
+[2026-02-20 15:07:20 INF] f17f532051281d8c87a7f9638fdb20a6 HTTP POST /hangfire/stats responded 200 in 1.0677 ms
+[2026-02-20 15:07:22 INF] a2f7bf5214dfa95e0a2aa03dd9844eb2 HTTP POST /hangfire/stats responded 200 in 1.1722 ms
+[2026-02-20 15:07:24 INF] 385632295e534f3fb99c705ae5c25166 HTTP POST /hangfire/stats responded 200 in 1.0431 ms
+[2026-02-20 15:07:26 INF] 93acc87e38aef8f5ece1d38c49748a46 HTTP POST /hangfire/stats responded 200 in 1.2911 ms
+[2026-02-20 15:07:28 INF] c7e947b4dbc70348adcc60111b111f22 HTTP POST /hangfire/stats responded 200 in 1.1857 ms
+[2026-02-20 15:07:30 INF] 75cf673381510461a378839bbee7d92b HTTP POST /hangfire/stats responded 200 in 1.2904 ms
+[2026-02-20 15:07:32 INF] 77f007b2ac3beacb8ef5adc042d4f9f7 HTTP POST /hangfire/stats responded 200 in 1.0711 ms
+[2026-02-20 15:07:34 INF] e48593e2ccce4df498277ad86d956662 HTTP POST /hangfire/stats responded 200 in 1.1887 ms
+[2026-02-20 15:07:36 INF] d584858ca8272348566373ee4794a8df HTTP POST /hangfire/stats responded 200 in 1.2683 ms
+[2026-02-20 15:07:38 INF] c557e00b00e811304d87ed2edda3c342 HTTP POST /hangfire/stats responded 200 in 1.0074 ms
+[2026-02-20 15:07:40 INF] 28736dcbfc6e6e6649212ea60db6139b HTTP POST /hangfire/stats responded 200 in 1.1509 ms
+[2026-02-20 15:07:42 INF] 46a1c7f82bc64e256f053ab05310ee26 HTTP POST /hangfire/stats responded 200 in 1.2328 ms
+[2026-02-20 15:07:45 INF] 972e5b6e9131b8250340296975f1bea5 HTTP POST /hangfire/stats responded 200 in 1.1976 ms
+[2026-02-20 15:07:47 INF] cf76c68dbe5f187cb2ff236e0aa0326b HTTP POST /hangfire/stats responded 200 in 1.1639 ms
+[2026-02-20 15:07:49 INF] 58caf3149f1c0097691d29fbc7f87cd2 HTTP POST /hangfire/stats responded 200 in 1.1705 ms
+[2026-02-20 15:07:51 INF] 0e4a51c3280951ad6da9f81b2cc7aec2 HTTP POST /hangfire/stats responded 200 in 1.2068 ms
+[2026-02-20 15:07:53 INF] 2c5c1b6203cbc263d8fba6591817d8a9 HTTP POST /hangfire/stats responded 200 in 1.1862 ms
+[2026-02-20 15:07:55 INF] 25cb5c828652a31a0d728d2b2f23606b HTTP POST /hangfire/stats responded 200 in 1.1298 ms
+[2026-02-20 15:07:57 INF] 7fc91ab1bafdbfc3692166af67ca8036 HTTP POST /hangfire/stats responded 200 in 1.0795 ms
+[2026-02-20 15:07:59 INF] 0c2c45c2e2f35d8fb99d7ea0117de351 HTTP POST /hangfire/stats responded 200 in 1.2709 ms
+[2026-02-20 15:08:01 INF] 42c91953cc811ee19b9f60aa043b7ea9 HTTP POST /hangfire/stats responded 200 in 1.1589 ms
+[2026-02-20 15:08:03 INF] 5626b2b37678d2b28162594ed8a87437 HTTP POST /hangfire/stats responded 200 in 1.2132 ms
+[2026-02-20 15:08:05 INF] a7687c205152df953a86a5a58df00b51 HTTP POST /hangfire/stats responded 200 in 8.3955 ms
+[2026-02-20 15:08:07 INF] 7dd3e465112e49e00d5df8a5839737f0 HTTP POST /hangfire/stats responded 200 in 7.4789 ms
+[2026-02-20 15:08:09 INF] 6129367b19f143e01dd927b71fc6f90d HTTP POST /hangfire/stats responded 200 in 6.8887 ms
+[2026-02-20 15:08:11 INF] b338742b291987df04aacdfbb9cf8290 HTTP POST /hangfire/stats responded 200 in 1.1393 ms
+[2026-02-20 15:08:13 INF] 8380eb97a7be5069ec29e0879bb68e33 HTTP POST /hangfire/stats responded 200 in 1.0684 ms
+[2026-02-20 15:08:15 INF] 66f5c46e264f531580a10d008c885667 HTTP POST /hangfire/stats responded 200 in 1.0742 ms
+[2026-02-20 15:08:17 INF] 71d55f61d4f333480bd20a935dd51844 HTTP POST /hangfire/stats responded 200 in 1.2352 ms
+[2026-02-20 15:08:19 INF] af1e93bcaff6ece6cf3e100048da4fa0 HTTP POST /hangfire/stats responded 200 in 1.0631 ms
+[2026-02-20 15:08:21 INF] c01ee7b208e8c80be6212394eacbb09b HTTP POST /hangfire/stats responded 200 in 1.1517 ms
+[2026-02-20 15:08:23 INF] 2bad41432cd814fec2c74dcd85c3fa6f HTTP POST /hangfire/stats responded 200 in 0.8742 ms
+[2026-02-20 15:08:25 INF] b2ad62c59f441ba2c7e7f7651ca12ce4 HTTP POST /hangfire/stats responded 200 in 1.0748 ms
+[2026-02-20 15:08:27 INF] 49e20c8c5e5dcbe01432aee40cb68d14 HTTP POST /hangfire/stats responded 200 in 1.1010 ms
+[2026-02-20 15:08:29 INF] dca51095107e2ba8e1c8b94df8912459 HTTP POST /hangfire/stats responded 200 in 1.0597 ms
+[2026-02-20 15:08:31 INF] 16145b0a9ed106927accba1df056c884 HTTP POST /hangfire/stats responded 200 in 1.1576 ms
+[2026-02-20 15:08:33 INF] 453574f1d8acf1e14fb14519fb982b0d HTTP POST /hangfire/stats responded 200 in 1.1528 ms
+[2026-02-20 15:08:35 INF] 3fa5a7a2dee0649c440fe6817598639e HTTP POST /hangfire/stats responded 200 in 1.2271 ms

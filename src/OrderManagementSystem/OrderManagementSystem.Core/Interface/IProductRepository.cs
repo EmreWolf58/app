@@ -12,5 +12,7 @@ namespace OrderManagementSystem.Core.Interface
         Task<List<Product>> GetAllAsync();
         Task<Product?> GetByIdAsync(int id);
         Task AddAsync(Product product);
+
+        Task<bool> DeleteAsync(int id);
     }
 }

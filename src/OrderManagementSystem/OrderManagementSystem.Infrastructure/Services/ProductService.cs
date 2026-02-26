@@ -33,5 +33,10 @@ namespace OrderManagementSystem.Infrastructure.Services
             return product;
 
         }
+
+        public async Task<bool> DeleteAsync(int id)
+        {
+            return await _repository.DeleteAsync(id);
+        }
     }
 }

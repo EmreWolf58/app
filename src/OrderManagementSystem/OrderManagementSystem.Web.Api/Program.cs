@@ -12,8 +12,12 @@ using Microsoft.OpenApi.Models;
 using Serilog;
 using OrderManagementSystem.Web.Api.Middleware;
 using OrderManagementSystem.Web.Api.Hangfire;
+using OrderManagementSystem.Web.Api.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Redis connection
+builder.Services.AddRedisCache(builder.Configuration);
 
 //serilog baðlantýsý
 Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(builder.Configuration).Enrich.FromLogContext().CreateLogger();

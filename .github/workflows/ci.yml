@@ -33,7 +33,7 @@ jobs:
         run: dotnet test src/OrderManagementSystem/OrderManagementSystem.slnx --no-build --configuration Release
 
       - name: Build Docker Image (API)
-        run: docker build -t oms-api ./src/OrderManagementSystem.Web.Api
+        run: docker build -t oms-api ./src/OrderManagementSystem/OrderManagementSystem.Web.Api
 
       - name: Build Docker Image (MVC)
-        run: docker build -t oms-mvc ./src/OrderManagementSystem.Web.Mvc
+        run: docker build -t oms-mvc ./src/OrderManagementSystem/OrderManagementSystem.Web.Mvc

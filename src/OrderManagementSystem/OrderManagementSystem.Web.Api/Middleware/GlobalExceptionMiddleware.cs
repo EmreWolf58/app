@@ -10,11 +10,13 @@ namespace OrderManagementSystem.Web.Api.Middleware
     {
         private readonly RequestDelegate _next;
         private readonly ILogger<GlobalExceptionMiddleware> _logger;
+        private readonly IWebHostEnvironment _env;
 
-        public GlobalExceptionMiddleware(RequestDelegate next, ILogger<GlobalExceptionMiddleware> logger)
+        public GlobalExceptionMiddleware(RequestDelegate next, ILogger<GlobalExceptionMiddleware> logger, IWebHostEnvironment env)
         {
             _next = next;
             _logger = logger;
+            _env = env;
         }
 
         public async Task Invoke (HttpContext context)
@@ -36,11 +38,14 @@ namespace OrderManagementSystem.Web.Api.Middleware
                 context.Response.StatusCode = statusCode;
                 context.Response.ContentType = "application/json";
 
+                var isDebug = _env.IsDevelopment() || _env.IsEnvironment("Testing");
+
                 var payload = new ErrorResponse
                 {
                     TraceId = traceId,
-                    Message = message,
-                    Status = statusCode
+                    Message = isDebug ? ex.Message : message,
+                    Status = statusCode,
+                    Detail = isDebug ? ex.ToString() : null
                 };
 
                 var json = JsonSerializer.Serialize(payload);

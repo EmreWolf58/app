@@ -15,3 +15,4 @@ This repository is a learning-focused full-stack .NET project.
 - Deploy to IIS and Docker
 - Add caching, background jobs, and messaging
 - Set up CI pipeline (GitHub Actions)
+ci test

@@ -22,6 +22,10 @@ if (!builder.Environment.IsEnvironment("Testing"))
 {
     builder.Services.AddRedisCache(builder.Configuration);
 }
+else
+{
+    builder.Services.AddSingleton<ICacheService, NullCacheService>();
+}
 
 //RabbitMQ baðlantýsý
 builder.Services.AddMassTransit(x =>

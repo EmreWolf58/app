@@ -17,8 +17,9 @@ namespace OrderManagementSystem.Tests.Integration
         public async Task Get_Products_ShouldReturnList()
         {
             var resp = await _client.GetAsync("/api/products");
+            var body = await resp.Content.ReadAsStringAsync();
 
-            Assert.Equal(HttpStatusCode.OK, resp.StatusCode);
+            Assert.True(resp.IsSuccessStatusCode, $"Status: {(int)resp.StatusCode} {resp.StatusCode}\nBody:\n{body}");
 
             var data = await resp.Content.ReadFromJsonAsync<List<ProductDto>>();
             Assert.NotNull(data);

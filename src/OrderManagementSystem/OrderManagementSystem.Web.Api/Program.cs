@@ -17,8 +17,11 @@ using MassTransit;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Redis connection
-builder.Services.AddRedisCache(builder.Configuration);
+// Redis connection (redisi localde devre dýþý býraktýk. CI-CD de patlýyor.)
+if (!builder.Environment.IsEnvironment("Testing"))
+{
+    builder.Services.AddRedisCache(builder.Configuration);
+}
 
 //RabbitMQ baðlantýsý
 builder.Services.AddMassTransit(x =>

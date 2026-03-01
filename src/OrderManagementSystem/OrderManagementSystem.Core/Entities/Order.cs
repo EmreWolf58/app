@@ -14,5 +14,6 @@ namespace OrderManagementSystem.Core.Entities
         public DateTime CreatedAtUtc { get; set; } = DateTime.UtcNow;
         public decimal TotalAmount { get; set; }
         public string Status { get; set; } = null!;
+        public string CustomerEmail { get; set; } = default!;
     }
 }

@@ -13,11 +13,26 @@ using Serilog;
 using OrderManagementSystem.Web.Api.Middleware;
 using OrderManagementSystem.Web.Api.Hangfire;
 using OrderManagementSystem.Web.Api.Redis;
+using MassTransit;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Redis connection
 builder.Services.AddRedisCache(builder.Configuration);
+
+//RabbitMQ baðlantýsý
+builder.Services.AddMassTransit(x =>
+{
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        // Docker compose içinden eriþimde host adý "rabbit"
+        cfg.Host("rabbit", "/", h =>
+        {
+            h.Username("guest");
+            h.Password("guest");
+        });
+    });
+});
 
 //serilog baðlantýsý
 Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(builder.Configuration).Enrich.FromLogContext().CreateLogger();

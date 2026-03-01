@@ -23,14 +23,14 @@ jobs:
         with:
           dotnet-version: 8.0.x
 
-      - name: Restore dependencies
-        run: dotnet restore
+      - name: Restore
+        run: dotnet restore src/OrderManagementSystem/OrderManagementSystem.slnx
 
       - name: Build
-        run: dotnet build --no-restore --configuration Release
+        run: dotnet build src/OrderManagementSystem/OrderManagementSystem.slnx --no-restore --configuration Release
 
-      - name: Run Tests
-        run: dotnet test --no-build --configuration Release
+      - name: Test
+        run: dotnet test src/OrderManagementSystem/OrderManagementSystem.slnx --no-build --configuration Release
 
       - name: Build Docker Image (API)
         run: docker build -t oms-api ./src/OrderManagementSystem.Web.Api

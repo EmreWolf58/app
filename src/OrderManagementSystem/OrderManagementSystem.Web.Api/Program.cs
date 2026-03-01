@@ -102,8 +102,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 });
 builder.Services.AddAuthorization();
 
-//hangfire
-builder.Services.AddHangfireSetup(builder.Configuration);
+if (!builder.Environment.IsEnvironment("Testing"))
+{
+    //hangfire
+    builder.Services.AddHangfireSetup(builder.Configuration);
+}
 
 var app = builder.Build();
 
@@ -129,8 +132,11 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 
-//hangfire
-app.UseHangfireSetup(app.Environment);
+if (!app.Environment.IsEnvironment("Testing"))
+{
+    //hangfire
+    app.UseHangfireSetup(app.Environment);
+}
 
 app.MapControllers();
 

@@ -12,7 +12,7 @@ namespace OrderManagementSystem.Core.Dtos
         public string OrderNo { get; set; } = null!;
         public string CustomerName { get; set; }= null!;
         public decimal TotalAmount { get; set; }
-        public string Status { get; set; }
+        public string Status { get; set; } = string.Empty;
         public DateTime CreatedAtUtc { get; set; }
     }
 }
